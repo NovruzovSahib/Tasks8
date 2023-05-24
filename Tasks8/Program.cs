@@ -55,7 +55,7 @@ internal class Program
         //Task7
         ////Console.Write("Input number of Fibonacci Series : ");
         ////int x = int.Parse(Console.ReadLine());
-        ////Console.WriteLine("The Fibonacci series of " + x + " numbers is :");
+        ////Console.WriteLine("The Fibonacci series of " + x + " numbers is: ");
         ////for (int i = 0; i < x; i++)
         ////{
         ////    Console.Write(Fibonacci(i) + "  ");
@@ -172,19 +172,19 @@ internal class Program
 
     #region Task7
 
-    public static int Fibonacci(int num)
+    public static int Fibonacci(int a)
     {
         int num1 = 0;
         int num2 = 1;
+        int sum = 0;
 
-        for (int i = 0; i < num; i++)
+        for (int i = 0; i < a; i++)
         {
-            int num3 = num1;
             num1 = num2;
-            num2 = num1 + num3;
+            num2 = sum;
+            sum = num1 + num2;
         }
-
-        return num1;
+        return sum;
 
     }
     #endregion
